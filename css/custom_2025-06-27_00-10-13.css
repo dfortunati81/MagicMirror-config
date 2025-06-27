@@ -1,0 +1,119 @@
+/* ===================================================
+   Existing Brightness & Overlay Tweaks
+   =================================================== */
+
+/* Brighten the text */
+.normal,
+.dimmed,
+header,
+body {
+  color: #fff !important;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+/* Dim the background image */
+.backgroundslideshow img {
+  filter: brightness(20%);  /* 0% = black, 100% = original */
+  transition: filter 0.5s ease;  /* smooth fade if you ever toggle */
+}
+
+/* Dark overlay over the slideshow */
+.backgroundslideshow::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===================================================
+   MagicMirror² Custom CSS
+   Generic Module Positioning Helpers
+   =================================================== */
+
+:root {
+  /* Generic helper offsets (Moon) */
+  --module-shift-y: 90px;
+  /* vertical offset for shifted */
+  --module-shift-x: -170px;
+  /* horizontal offset for shifted */
+
+  /* Independent helper offsets (Compliments) */
+  --module2-shift-y: 140px;
+  /* vertical offset for shifted2 */
+  --module2-shift-x: 0px;
+  /* horizontal offset for shifted2 */
+}
+
+/* 1. Helper to move a module down by var(--module-shift-y) */
+.module.shifted-vertical {
+  position: relative;
+  top: var(--module-shift-y);
+}
+
+/* 2. Helper to move a module right by var(--module-shift-x) */
+.module.shifted-horizontal {
+  position: relative;
+  left: var(--module-shift-x);
+}
+
+/* 3. Shortcut helper to do both at once */
+.module.shifted {
+  position: relative;
+  top: var(--module-shift-y);
+  left: var(--module-shift-x);
+}
+
+/* 4. Independent helper: separate offsets via CSS variables */
+.module.shifted2 {
+  position: relative;
+  top: var(--module2-shift-y);
+  left: var(--module2-shift-x);
+}
+
+/* ===================================================
+   Example: Other Common Tweaks
+   (Uncomment & adapt as needed)
+   =================================================== */
+
+/* Brighten all text globally */
+/*
+body {
+  color: #fff !important;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+*/
+
+/* Dim the background slideshow images */
+/*
+.backgroundslideshow img {
+  filter: brightness(50%);
+}
+*/
+
+/* Dark overlay over the slideshow */
+/*
+.backgroundslideshow::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+*/
+
+/* Example: Add a pulsing animation to alerts */
+/*
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+.module.alert {
+  animation: pulse 2s infinite;
+}
+*/
+

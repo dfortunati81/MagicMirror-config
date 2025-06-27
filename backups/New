@@ -1,0 +1,12 @@
+{
+    /* Don't share your credentials! */
+    module: "MMM-OnSpotify",
+    position: "bottom_right", /* bottom_left, bottom_center */
+        config: {
+        clientID: "d6ce999cdb3e4b0ea56fb21f6bc2d290",
+        clientSecret: "3a6c159e5611406583fc370dd7955df4",
+        accessToken: "BQB0OHywfYHfeO_ofCzdRiT1ZPLav7Sv4hK-mJlvUqC4aGJEW21mmqoQH3qnZJEPslnid1oDcI9sMNyO9qYbxZrAeP_wbyAwqLjop900G_YpqZzQcRkIaXQHnDo53lDNInqXc9olNmeKP8pP93K6jAWx0lK76z7KZKF1CPP5GPBCyuvbR3Z1A5sVeAV2mbllmAUE5GPJ9Dn_5J4RTff5BO0kAcZFth4VxB14yForZiKKIETuRw",
+        refreshToken: "AQAz66-iHvEhOV58rag3TOphTgF148l3myliBYYIsOLVzh2nb993tCGyVD7iMnUvr0a7D7CL2v1JDfJaIOs1ZC0GB43N4nocRYIFBmZ4AtbPDBlfpuUlKpci64KcBYgI1ic",
+        /* Add here your configurations */
+    }
+},

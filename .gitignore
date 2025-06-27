@@ -1,0 +1,10 @@
+# don’t commit the big core file
+core
+
+# don’t commit your real MagicMirror config
+/config/config.js
+
+# Node modules, logs, pm2, etc.
+node_modules/
+*.log
+.PM2/
